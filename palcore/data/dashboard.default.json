@@ -1,0 +1,457 @@
+{
+  "event_topics": [
+    "player.join",
+    "player.leave",
+    "player.death",
+    "player.level_up",
+    "pal.spawned",
+    "pal.updated",
+    "world.boss_spawn",
+    "world.weather_change",
+    "dungeon.open",
+    "dungeon.clear",
+    "economy.item_sold",
+    "economy.auction_win",
+    "economy.guild_trade",
+    "guild.war_started",
+    "server.health",
+    "pal.registry.updated",
+    "pal.breeding.completed",
+    "pal.mutation.discovered",
+    "pal.evolution.started",
+    "pal.fusion.completed",
+    "pal.ai.override",
+    "pal.job.assigned",
+    "pal.market.listed",
+    "pal.combat.skill_cast",
+    "pal.death",
+    "pal.recovered",
+    "pal.transfer.completed",
+    "pal.dynamic_event.spawned"
+  ],
+  "modules": [
+    {
+      "key": "server-manager",
+      "name": "Server Management",
+      "summary": "Lifecycle, backups, config editing, monitoring, logs, Docker deployment, and multi-instance control.",
+      "phase": 1,
+      "capabilities": [
+        "create",
+        "start",
+        "stop",
+        "restart",
+        "backup",
+        "monitor",
+        "logs"
+      ]
+    },
+    {
+      "key": "realtime-dashboard",
+      "name": "Realtime Dashboard",
+      "summary": "WebSocket-powered views of players, guilds, world status, boss events, dungeon events, and health.",
+      "phase": 2,
+      "capabilities": [
+        "websocket",
+        "live-logs",
+        "alerts",
+        "activity-feed"
+      ]
+    },
+    {
+      "key": "world-map",
+      "name": "Live World Map",
+      "summary": "Live player, base, boss, resource, dungeon, guild territory, PvP, safe-zone, and event layers.",
+      "phase": 2,
+      "capabilities": [
+        "coordinate-sync",
+        "tile-engine",
+        "layers",
+        "heatmaps"
+      ]
+    },
+    {
+      "key": "mod-manager",
+      "name": "Mod Management",
+      "summary": "Upload .pak files, enable/disable, dependency installation, conflict detection, versioning, and rollback.",
+      "phase": 3,
+      "capabilities": [
+        "pak-upload",
+        "dependencies",
+        "conflicts",
+        "rollback",
+        "modpacks"
+      ]
+    },
+    {
+      "key": "plugin-platform",
+      "name": "Plugin Ecosystem",
+      "summary": "Manifest validation, event APIs, permissions, dependency checks, SDKs, marketplace, and revenue sharing.",
+      "phase": 3,
+      "capabilities": [
+        "python",
+        "lua",
+        "javascript",
+        "events",
+        "marketplace"
+      ]
+    },
+    {
+      "key": "advanced-pal-system",
+      "name": "Advanced Pal System",
+      "summary": "Creature registry, realtime AI tracking, breeding simulation, genetics, evolution, fusion, jobs, marketplace, combat replay, and cross-server Pal operations.",
+      "phase": 4,
+      "capabilities": [
+        "registry",
+        "live-viewer",
+        "spawn-control",
+        "breeding",
+        "genetics",
+        "evolution",
+        "fusion",
+        "ai-control",
+        "jobs",
+        "marketplace",
+        "combat-replay",
+        "cross-server"
+      ]
+    },
+    {
+      "key": "mmo-systems",
+      "name": "Advanced MMO Systems",
+      "summary": "Economy, auction house, guild wars, dungeon scheduling, anti-cheat, analytics, and Pal administration.",
+      "phase": 4,
+      "capabilities": [
+        "economy",
+        "guilds",
+        "dungeons",
+        "anti-cheat",
+        "pal-admin"
+      ]
+    },
+    {
+      "key": "cloud-hosting",
+      "name": "SaaS Hosting Platform",
+      "summary": "Subscriptions, billing, cloud backups, multi-tenant control plane, auto scaling, and mobile operations.",
+      "phase": 5,
+      "capabilities": [
+        "billing",
+        "backups",
+        "autoscaling",
+        "mobile-alerts",
+        "enterprise"
+      ]
+    }
+  ],
+  "servers": [],
+  "players": [],
+  "pals": [],
+  "guilds": [],
+  "dungeons": [],
+  "economy": [],
+  "map_markers": [],
+  "audit_logs": [],
+  "pal_system": {
+    "goal": "Turn Pals into a creature management platform, breeding simulator, MMO pet system, and live AI entity framework.",
+    "pillars": [
+      "creature management platform",
+      "breeding simulator",
+      "MMO pet system",
+      "live AI entity framework"
+    ],
+    "registry_features": [
+      "Global Pal registry",
+      "Search/filter system",
+      "Rarity tracking",
+      "Trait indexing",
+      "Breeding history",
+      "Ownership history"
+    ],
+    "registry_filters": [
+      "element",
+      "rarity",
+      "passive skill",
+      "IV/stat",
+      "alpha/boss",
+      "guild owner"
+    ],
+    "viewer_actions": [
+      "view realtime Pal",
+      "view location",
+      "view owner",
+      "view AI state",
+      "view current target"
+    ],
+    "realtime_actions": [
+      "Working",
+      "Sleeping",
+      "Eating",
+      "Fighting",
+      "Stuck",
+      "Pathfinding"
+    ],
+    "spawn_features": [
+      "spawn any Pal",
+      "spawn shiny/custom variants",
+      "mass spawn",
+      "event spawn",
+      "timed spawn"
+    ],
+    "spawn_types": [
+      "wild spawn",
+      "dungeon spawn",
+      "raid spawn",
+      "admin spawn",
+      "event spawn"
+    ],
+    "spawn_controls": [
+      "level scaling",
+      "stat scaling",
+      "passive injection",
+      "custom moveset"
+    ],
+    "breeding_features": [
+      "breeding calculator",
+      "breeding simulator",
+      "mutation system",
+      "inherited traits",
+      "bloodline tracking"
+    ],
+    "gene_flow": [
+      "Parent A",
+      "Parent B",
+      "inherited passives",
+      "mutation chance",
+      "stat reroll"
+    ],
+    "genetics": {
+      "fields": [
+        "hidden genes",
+        "mutation rate",
+        "breeding quality",
+        "elemental affinity"
+      ],
+      "advanced": [
+        "rare mutation",
+        "hybrid traits",
+        "custom species evolution"
+      ]
+    },
+    "evolution": {
+      "features": [
+        "custom evolution tree",
+        "level evolution",
+        "item evolution",
+        "dungeon evolution",
+        "fusion evolution"
+      ],
+      "example": [
+        "Foxparks",
+        "FlameFox",
+        "InfernalFox"
+      ]
+    },
+    "fusion": {
+      "features": [
+        "fuse 2 Pal",
+        "combine passives",
+        "merge elements",
+        "hybrid species"
+      ],
+      "example": "Anubis + Shadowbeak -> Shadow Anubis"
+    },
+    "ai_states": [
+      "aggressive",
+      "passive",
+      "worker",
+      "defensive",
+      "patrol",
+      "escort",
+      "combat",
+      "pathfinding"
+    ],
+    "ai_controls": [
+      "force attack",
+      "force gather",
+      "force patrol",
+      "AI override"
+    ],
+    "job_system": {
+      "features": [
+        "assign jobs",
+        "priority system",
+        "work schedules",
+        "energy management"
+      ],
+      "jobs": [
+        "mining",
+        "farming",
+        "crafting",
+        "transporting",
+        "guarding"
+      ],
+      "automation": "If hunger < 20 -> eat; else -> continue mining"
+    },
+    "marketplace": {
+      "features": [
+        "global market",
+        "auction house",
+        "Pal trading",
+        "rarity pricing"
+      ],
+      "filters": [
+        "passive",
+        "IV",
+        "alpha",
+        "shiny",
+        "mutation"
+      ]
+    },
+    "equipment": {
+      "features": [
+        "armor",
+        "accessories",
+        "tools",
+        "combat gear"
+      ],
+      "stats": [
+        "attack bonus",
+        "defense bonus",
+        "movement speed",
+        "stamina boost"
+      ]
+    },
+    "skill_trees": {
+      "features": [
+        "unlock abilities",
+        "specialization",
+        "combat tree",
+        "worker tree"
+      ],
+      "combat_tree": [
+        "Critical Boost",
+        "Fire Mastery",
+        "Berserk Mode"
+      ]
+    },
+    "personalities": {
+      "types": [
+        "aggressive",
+        "loyal",
+        "lazy",
+        "intelligent",
+        "fearless"
+      ],
+      "effects": [
+        "work speed",
+        "combat behavior",
+        "breeding",
+        "loyalty"
+      ]
+    },
+    "loyalty_bond": {
+      "features": [
+        "friendship level",
+        "trust system",
+        "morale system"
+      ],
+      "effects": [
+        "better combat",
+        "faster work",
+        "rare abilities"
+      ]
+    },
+    "fatigue": {
+      "features": [
+        "exhaustion",
+        "stress",
+        "burnout"
+      ],
+      "needs": [
+        "sleep",
+        "food",
+        "recreation"
+      ]
+    },
+    "combat_viewer": {
+      "features": [
+        "active combat",
+        "damage logs",
+        "AI decisions",
+        "skill usage"
+      ],
+      "replay": [
+        "timeline",
+        "skill cast",
+        "damage chart"
+      ]
+    },
+    "dungeon": {
+      "features": [
+        "dungeon companion AI",
+        "dungeon buffs",
+        "dungeon debuffs",
+        "raid synchronization"
+      ]
+    },
+    "death_recovery": {
+      "features": [
+        "revive timer",
+        "permanent injury",
+        "recovery center",
+        "medical system"
+      ]
+    },
+    "rankings": [
+      "strongest Pal",
+      "fastest worker",
+      "best breeder",
+      "dungeon MVP"
+    ],
+    "collection": {
+      "features": [
+        "Pal encyclopedia",
+        "achievements",
+        "rarity collection",
+        "seasonal collections"
+      ]
+    },
+    "creator_tools": [
+      "create new species",
+      "import models",
+      "custom animations",
+      "custom skills",
+      "stat editor",
+      "AI editor",
+      "animation hooks",
+      "sound editor"
+    ],
+    "map_layer": [
+      "Pal location",
+      "alpha bosses",
+      "breeding farms",
+      "Pal migration"
+    ],
+    "cross_server": [
+      "transfer Pal between servers",
+      "cloud storage",
+      "global marketplace"
+    ],
+    "dynamic_events": [
+      {
+        "name": "Meteor Shower",
+        "effect": "rare Pal spawn"
+      },
+      {
+        "name": "Blood Moon",
+        "effect": "aggressive behavior"
+      }
+    ],
+    "public_api": [
+      "create Pal mods",
+      "add abilities",
+      "inject AI",
+      "create evolutions"
+    ],
+    "future_vision": "Transform Palworld from a survival game into an MMO creature ecosystem platform."
+  }
+}

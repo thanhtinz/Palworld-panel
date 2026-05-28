@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palcore"
+version = "0.1.0"
+description = "Advanced Palworld server platform and mod ecosystem foundation."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [{ name = "PALCORE" }]
+
+[project.optional-dependencies]
+api = [
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+]
+dev = [
+  "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.package-data]
+palcore = ["static/*.html", "static/*.css", "static/*.js", "data/*.json"]
