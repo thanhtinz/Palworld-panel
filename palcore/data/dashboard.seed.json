@@ -1,0 +1,302 @@
+{
+  "event_topics": [
+    "player.join",
+    "player.leave",
+    "player.death",
+    "player.level_up",
+    "pal.spawned",
+    "pal.updated",
+    "world.boss_spawn",
+    "world.weather_change",
+    "dungeon.open",
+    "dungeon.clear",
+    "economy.item_sold",
+    "economy.auction_win",
+    "economy.guild_trade",
+    "guild.war_started",
+    "server.health"
+  ],
+  "modules": [
+    {
+      "key": "server-manager",
+      "name": "Server Management",
+      "summary": "Lifecycle, backups, config editing, monitoring, logs, Docker deployment, and multi-instance control.",
+      "phase": 1,
+      "capabilities": ["create", "start", "stop", "restart", "backup", "monitor", "logs"]
+    },
+    {
+      "key": "realtime-dashboard",
+      "name": "Realtime Dashboard",
+      "summary": "WebSocket-powered views of players, guilds, world status, boss events, dungeon events, and health.",
+      "phase": 2,
+      "capabilities": ["websocket", "live-logs", "alerts", "activity-feed"]
+    },
+    {
+      "key": "world-map",
+      "name": "Live World Map",
+      "summary": "Live player, base, boss, resource, dungeon, guild territory, PvP, safe-zone, and event layers.",
+      "phase": 2,
+      "capabilities": ["coordinate-sync", "tile-engine", "layers", "heatmaps"]
+    },
+    {
+      "key": "plugin-platform",
+      "name": "Plugin Ecosystem",
+      "summary": "Manifest validation, event APIs, permissions, dependency checks, SDKs, marketplace, and revenue sharing.",
+      "phase": 3,
+      "capabilities": ["python", "lua", "javascript", "events", "marketplace"]
+    },
+    {
+      "key": "mod-manager",
+      "name": "Mod Management",
+      "summary": "Upload .pak files, enable/disable, dependency installation, conflict detection, versioning, and rollback.",
+      "phase": 3,
+      "capabilities": ["pak-upload", "dependencies", "conflicts", "rollback", "modpacks"]
+    },
+    {
+      "key": "mmo-systems",
+      "name": "Advanced MMO Systems",
+      "summary": "Economy, auction house, guild wars, dungeon scheduling, anti-cheat, analytics, and Pal administration.",
+      "phase": 4,
+      "capabilities": ["economy", "guilds", "dungeons", "anti-cheat", "pal-admin"]
+    },
+    {
+      "key": "cloud-hosting",
+      "name": "SaaS Hosting Platform",
+      "summary": "Subscriptions, billing, cloud backups, multi-tenant control plane, auto scaling, and mobile operations.",
+      "phase": 5,
+      "capabilities": ["billing", "backups", "autoscaling", "mobile-alerts", "enterprise"]
+    }
+  ],
+  "servers": [
+    {
+      "server_id": "6a4c3e61-70bf-4c74-bc10-0479d7d86d43",
+      "name": "PALCORE Vanilla+",
+      "region": "us-west",
+      "status": "running",
+      "max_players": 64,
+      "online_players": 42,
+      "cpu_percent": 48.5,
+      "ram_mb": 12288,
+      "disk_gb": 84.2,
+      "tps": 29.9,
+      "fps": 60.0,
+      "network_in_mbps": 9.8,
+      "network_out_mbps": 18.4,
+      "last_backup_at": "2026-05-28T17:30:00+00:00"
+    },
+    {
+      "server_id": "d43b5f38-d83e-47f2-a9df-86e18a526482",
+      "name": "PALCORE MMO Lab",
+      "region": "eu-central",
+      "status": "restarting",
+      "max_players": 128,
+      "online_players": 97,
+      "cpu_percent": 81.0,
+      "ram_mb": 20480,
+      "disk_gb": 143.8,
+      "tps": 24.3,
+      "fps": 54.0,
+      "network_in_mbps": 22.1,
+      "network_out_mbps": 41.7,
+      "last_backup_at": "2026-05-28T16:45:00+00:00"
+    },
+    {
+      "server_id": "58ef9f08-4c1e-404b-8f71-845fa076361f",
+      "name": "PALCORE Hardcore PvP",
+      "region": "ap-southeast",
+      "status": "running",
+      "max_players": 96,
+      "online_players": 63,
+      "cpu_percent": 67.4,
+      "ram_mb": 16384,
+      "disk_gb": 101.6,
+      "tps": 27.8,
+      "fps": 58.0,
+      "network_in_mbps": 14.6,
+      "network_out_mbps": 28.9,
+      "last_backup_at": "2026-05-28T17:05:00+00:00"
+    }
+  ],
+  "players": [
+    {
+      "player_id": "772c2e9f-6c52-4eb3-b53f-074dd24df642",
+      "name": "Astra",
+      "level": 48,
+      "guild": "Skyforge",
+      "playtime_hours": 213.4,
+      "ping_ms": 42,
+      "coordinates": [36.5, 62.0],
+      "status": "online",
+      "warnings": 0,
+      "last_seen_at": "2026-05-28T18:00:00+00:00"
+    },
+    {
+      "player_id": "33575605-6689-4a88-965b-bb38a5432fda",
+      "name": "BanhMiBoss",
+      "level": 37,
+      "guild": "Lotus Guard",
+      "playtime_hours": 96.2,
+      "ping_ms": 55,
+      "coordinates": [58.0, 41.2],
+      "status": "online",
+      "warnings": 1,
+      "last_seen_at": "2026-05-28T17:57:00+00:00"
+    },
+    {
+      "player_id": "f6313224-d280-45e9-b832-5fba15a932c6",
+      "name": "CrimsonFox",
+      "level": 52,
+      "guild": "Skyforge",
+      "playtime_hours": 401.8,
+      "ping_ms": 38,
+      "coordinates": [71.4, 33.1],
+      "status": "online",
+      "warnings": 0,
+      "last_seen_at": "2026-05-28T17:55:00+00:00"
+    },
+    {
+      "player_id": "c7db4117-3e0b-4d7a-9e44-66cc717951e9",
+      "name": "MechaTamers",
+      "level": 29,
+      "guild": "Iron Nest",
+      "playtime_hours": 64.5,
+      "ping_ms": 88,
+      "coordinates": [18.8, 76.4],
+      "status": "online",
+      "warnings": 2,
+      "last_seen_at": "2026-05-28T17:52:00+00:00"
+    }
+  ],
+  "pals": [
+    {
+      "pal_id": "d204ab54-4c41-4fd1-82e2-41f2f64cbad8",
+      "species": "Jetragon",
+      "level": 50,
+      "owner": "Astra",
+      "passive_traits": ["Swift", "Legend", "Runner"],
+      "hp_percent": 94,
+      "stamina_percent": 82,
+      "coordinates": [38.0, 60.5],
+      "market_value": 125000
+    },
+    {
+      "pal_id": "fd65ecf5-28d2-4073-bf28-c401ee97a4da",
+      "species": "Anubis",
+      "level": 44,
+      "owner": "BanhMiBoss",
+      "passive_traits": ["Artisan", "Work Slave"],
+      "hp_percent": 88,
+      "stamina_percent": 71,
+      "coordinates": [56.2, 43.0],
+      "market_value": 76000
+    },
+    {
+      "pal_id": "4965072e-aeb3-4d34-9bde-ae28a5ba8149",
+      "species": "Grizzbolt",
+      "level": 39,
+      "owner": "CrimsonFox",
+      "passive_traits": ["Musclehead", "Ferocious"],
+      "hp_percent": 67,
+      "stamina_percent": 58,
+      "coordinates": [72.8, 31.5],
+      "market_value": 54000
+    },
+    {
+      "pal_id": "978e3528-41e8-4ba1-91e0-844fe9b12107",
+      "species": "Lyleen",
+      "level": 46,
+      "owner": "MechaTamers",
+      "passive_traits": ["Botanical Barrier", "Serious"],
+      "hp_percent": 100,
+      "stamina_percent": 91,
+      "coordinates": [21.5, 78.1],
+      "market_value": 68000
+    }
+  ],
+  "guilds": [
+    {
+      "guild_id": "b94dfbf5-3b25-46bc-9036-f7c396306a7e",
+      "name": "Skyforge",
+      "leader": "Astra",
+      "members_online": 18,
+      "total_members": 42,
+      "territory_count": 7,
+      "bank_balance": 1240000,
+      "war_score": 1840
+    },
+    {
+      "guild_id": "e2a6be13-ec21-4cbd-9082-e03e45effaf7",
+      "name": "Lotus Guard",
+      "leader": "BanhMiBoss",
+      "members_online": 11,
+      "total_members": 30,
+      "territory_count": 5,
+      "bank_balance": 860000,
+      "war_score": 1420
+    },
+    {
+      "guild_id": "30c456da-1500-4b34-bf3f-7c9e6d3691aa",
+      "name": "Iron Nest",
+      "leader": "MechaTamers",
+      "members_online": 8,
+      "total_members": 21,
+      "territory_count": 3,
+      "bank_balance": 410000,
+      "war_score": 970
+    }
+  ],
+  "dungeons": [
+    {
+      "dungeon_id": "f441cc8a-5957-4d03-a345-c48d93e201e0",
+      "name": "Volcanic Crown Raid",
+      "difficulty": "Mythic",
+      "status": "open",
+      "boss": "Blazamut Ryu",
+      "next_reset_at": "2026-05-28T18:44:00+00:00",
+      "completion_rate": 62.5,
+      "fastest_clear_seconds": 742,
+      "death_count": 38
+    },
+    {
+      "dungeon_id": "5c6f0e2c-6181-450e-98da-510be9fd3e4a",
+      "name": "Frozen Citadel",
+      "difficulty": "Heroic",
+      "status": "cooldown",
+      "boss": "Frostallion",
+      "next_reset_at": "2026-05-28T20:12:00+00:00",
+      "completion_rate": 71.1,
+      "fastest_clear_seconds": 613,
+      "death_count": 24
+    },
+    {
+      "dungeon_id": "c7ed7d77-b80b-4915-b1d4-86292cef1fd4",
+      "name": "Moonless Cavern",
+      "difficulty": "Elite",
+      "status": "scheduled",
+      "boss": "Shadowbeak",
+      "next_reset_at": "2026-05-28T18:17:00+00:00",
+      "completion_rate": 48.9,
+      "fastest_clear_seconds": 901,
+      "death_count": 52
+    }
+  ],
+  "economy": [
+    {"label": "Marketplace Volume", "value": 2840000, "change_percent": 14.2, "unit": "coins"},
+    {"label": "Auction House Sales", "value": 348, "change_percent": 8.7, "unit": "sales"},
+    {"label": "Guild Tax Collected", "value": 186500, "change_percent": -3.1, "unit": "coins"},
+    {"label": "Rare Pal Trades", "value": 27, "change_percent": 22.4, "unit": "trades"}
+  ],
+  "map_markers": [
+    {"marker_id": "06f1e9fb-31b6-4c1a-a42d-77e9dfc77d2a", "marker_type": "player", "label": "Astra", "x": 36.5, "y": 62.0, "severity": "info"},
+    {"marker_id": "f4a01fce-b71f-4572-b386-dcf5fc4f1b8d", "marker_type": "boss", "label": "Raid: Blazamut Ryu", "x": 66.0, "y": 24.5, "severity": "critical"},
+    {"marker_id": "60d3b9f3-0db2-4e97-9651-f227a28b1e28", "marker_type": "base", "label": "Skyforge HQ", "x": 44.5, "y": 54.0, "severity": "info"},
+    {"marker_id": "8382f859-f0be-4504-95ac-e42f56b09196", "marker_type": "dungeon", "label": "Moonless Cavern", "x": 23.4, "y": 68.8, "severity": "warning"},
+    {"marker_id": "42b105ad-16ba-44a5-8324-3c06c6fc9047", "marker_type": "resource", "label": "Quartz Heatmap", "x": 81.5, "y": 48.2, "severity": "info"}
+  ],
+  "audit_logs": [
+    {"log_id": "d9151fd4-8f9f-4d02-8eeb-844ef774a75f", "actor": "system", "action": "Auto backup completed", "target": "PALCORE Vanilla+", "severity": "info", "occurred_at": "2026-05-28T17:52:00+00:00"},
+    {"log_id": "4e7d13ab-ad79-46b6-997b-901ac567b579", "actor": "GM-Linh", "action": "Muted player", "target": "MechaTamers", "severity": "warning", "occurred_at": "2026-05-28T17:46:00+00:00"},
+    {"log_id": "ef1edb7c-e2df-4382-a8ab-372a022fe81d", "actor": "DungeonBot", "action": "Opened event dungeon", "target": "Volcanic Crown Raid", "severity": "info", "occurred_at": "2026-05-28T17:38:00+00:00"},
+    {"log_id": "779c916d-60e5-4f88-8046-df6518853ebe", "actor": "AntiCheat", "action": "Flagged abnormal movement", "target": "Unknown-7742", "severity": "critical", "occurred_at": "2026-05-28T17:29:00+00:00"}
+  ]
+}
