@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PALCORE Panel</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">PC</span>
+          <div>
+            <strong>PALCORE</strong>
+            <small>Server OS</small>
+          </div>
+        </div>
+        <nav>
+          <a href="#overview" class="active">Overview</a>
+          <a href="#servers">Servers</a>
+          <a href="#players">Players</a>
+          <a href="#pals">Pals</a>
+          <a href="#map">Live Map</a>
+          <a href="#dungeons">Dungeons</a>
+          <a href="#economy">Economy</a>
+          <a href="#plugins">Plugins</a>
+        </nav>
+        <div class="sidebar-card">
+          <span>Realtime Gateway</span>
+          <strong id="topic-count">-- topics</strong>
+          <small>WebSocket/API ready</small>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="hero" id="overview">
+          <div>
+            <p class="eyebrow">Advanced Palworld Server Platform</p>
+            <h1>Operate servers, mods, dungeons, economy and live worlds from one panel.</h1>
+            <p class="hero-copy">PALCORE combines a Linux panel, mod ecosystem, and MMO admin console purpose-built for Palworld communities.</p>
+          </div>
+          <div class="hero-actions">
+            <button data-action="restart">Restart Cluster</button>
+            <button data-action="backup" class="secondary">Run Backup</button>
+          </div>
+        </section>
+
+        <section class="metric-grid" aria-label="Platform totals">
+          <article class="metric-card"><span>Online Players</span><strong id="online-players">--</strong><small id="player-capacity">-- capacity</small></article>
+          <article class="metric-card"><span>Avg Health</span><strong id="average-health">--</strong><small>across managed servers</small></article>
+          <article class="metric-card"><span>Tracked Pals</span><strong id="tracked-pals">--</strong><small>realtime Pal admin</small></article>
+          <article class="metric-card"><span>Active Dungeons</span><strong id="active-dungeons">--</strong><small>events and raids</small></article>
+        </section>
+
+        <section class="panel-grid two-column">
+          <article class="panel" id="servers">
+            <div class="panel-heading"><h2>Server Fleet</h2><span>CPU · RAM · TPS · FPS</span></div>
+            <div class="server-list" id="server-list"></div>
+          </article>
+
+          <article class="panel" id="map">
+            <div class="panel-heading"><h2>Live World Map</h2><span>Game coordinates → tile engine</span></div>
+            <div class="map" id="live-map"></div>
+            <div class="legend"><span class="dot info"></span>Players/Base <span class="dot warn"></span>Dungeon <span class="dot critical"></span>Boss/Cheat</div>
+          </article>
+        </section>
+
+        <section class="panel-grid three-column">
+          <article class="panel" id="players"><div class="panel-heading"><h2>Players</h2><span>Moderation</span></div><div id="player-list" class="compact-list"></div></article>
+          <article class="panel" id="pals"><div class="panel-heading"><h2>Pal Management</h2><span>Live tracking</span></div><div id="pal-list" class="compact-list"></div></article>
+          <article class="panel" id="dungeons"><div class="panel-heading"><h2>Dungeons</h2><span>Scheduler</span></div><div id="dungeon-list" class="compact-list"></div></article>
+        </section>
+
+        <section class="panel-grid two-column">
+          <article class="panel" id="economy"><div class="panel-heading"><h2>Economy</h2><span>Marketplace + guild bank</span></div><div id="economy-list" class="economy-grid"></div></article>
+          <article class="panel" id="plugins"><div class="panel-heading"><h2>Platform Modules</h2><span>Roadmap phases</span></div><div id="module-list" class="module-list"></div></article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading"><h2>Audit & Live Events</h2><span>Security, backups, dungeon ops</span></div>
+          <div id="audit-log" class="audit-log"></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>
